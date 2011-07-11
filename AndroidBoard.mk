@@ -25,9 +25,9 @@ ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/../common/init.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(TARGET_ROOT_OUT)/init.snowball.rc
+file := $(TARGET_ROOT_OUT)/init.st-ericsson.rc
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.snowball.rc | $(ACP)
+$(file) : $(LOCAL_PATH)/init.st-ericsson.rc | $(ACP)
 	$(transform-prebuilt-to-target)
 
 file := $(PRODUCT_OUT)/system/etc/init.snowball.sh
