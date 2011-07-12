@@ -12,9 +12,6 @@ on init
     write /sys/kernel/debug/pm_debug/smartreflex/sr_mpu/autocomp 1
 
 on boot
-    setprop ro.build.product omap4sdp
-    setprop ro.product.device omap4sdp
-
     # create dhcpcd dir
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chmod 0770 /data/misc/dhcp
@@ -102,9 +99,9 @@ on boot
     chmod 0666 /dev/pvrsrvkm
 
 # Initialize the SGX driver
-service pvrsrvinit /system/bin/pvrsrvinit
-    user root
-    oneshot
+#service pvrsrvinit /system/bin/pvrsrvinit
+#    user root
+#    oneshot
 
 service faketsd /system/bin/faketsd
     user bluetooth
