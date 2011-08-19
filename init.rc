@@ -91,9 +91,16 @@ loglevel 3
 
 on fs
 # mount mmc partitions
-    mount ext4 /dev/block/mmcblk1p2 /system ro
-    mount ext4 /dev/block/mmcblk1p3 /cache
-    mount ext4 /dev/block/mmcblk1p5 /data
+
+# ! Snowall Hack Alert !
+# The current 3.0 kernel has problems mounting the mmc card.
+# Disabling the emmc and allowing more time for the mmc 
+# card to be probed seems to help.  This should be reverted
+# back to 'mmcblk1pX' but for now, it yields a bootable system.
+
+    mount ext4 /dev/block/mmcblk0p2 /system ro
+    mount ext4 /dev/block/mmcblk0p3 /cache
+    mount ext4 /dev/block/mmcblk0p5 /data
 
 on post-fs
     # once everything is setup, no need to modify /
