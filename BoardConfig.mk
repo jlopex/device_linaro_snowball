@@ -54,3 +54,6 @@ BOARD_KERNEL_CMDLINE := omapdss.def_disp=hdmi consoleblank=0
 # Snowball uses a Nova A9500 -- Dual-Core Cortex A9
 TARGET_CPU_SMP := true
 TARGET_EXTRA_CFLAGS += -mtune=cortex-a9 -mcpu=cortex-a9
+
+# ARMs gator (DS-5)
+TARGET_USE_GATOR:= true
