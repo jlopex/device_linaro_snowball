@@ -19,3 +19,25 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
         device/linaro/snowball/init.st-ericsson.rc:root/init.st-ericsson.rc \
         device/linaro/snowball/ueventd.st-ericsson.rc:root/ueventd.st-ericsson.rc
+
+PRODUCT_PACKAGES := \
+        make_ext4fs \
+        com.android.future.usb.accessory
+
+PRODUCT_PROPERTY_OVERRIDES := \
+        hwui.render_dirty_regions=false
+
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
+
+#DEVICE_PACKAGE_OVERLAYS := \
+    device/ti/panda/overlay
+
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+PRODUCT_PACKAGES += \
+        librs_jni \
+        com.android.future.usb.accessory
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+        make_ext4fs
