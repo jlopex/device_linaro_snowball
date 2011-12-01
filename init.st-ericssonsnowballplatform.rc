@@ -112,6 +112,7 @@ service faketsd /system/bin/faketsd
 
 #userspace daemon needed for gator
 service gatord /system/bin/gatord
+    class main
     user root
     oneshot
 
