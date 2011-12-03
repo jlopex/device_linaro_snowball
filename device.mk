@@ -17,6 +17,7 @@ PRODUCT_COPY_FILES := \
     device/linaro/snowball/egl.cfg:system/lib/egl/egl.cfg
 
 PRODUCT_COPY_FILES += \
+        device/linaro/snowball/init.rc:root/init.rc \
         device/linaro/snowball/init.st-ericsson.rc:root/init.st-ericsson.rc \
         device/linaro/snowball/ueventd.st-ericsson.rc:root/ueventd.st-ericsson.rc
 
