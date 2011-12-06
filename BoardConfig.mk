@@ -41,3 +41,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 #TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
 #TARGET_USE_GATOR:= true
+
+# Snowball uses a Nova A9500 -- Dual-Core Cortex A9
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8))
