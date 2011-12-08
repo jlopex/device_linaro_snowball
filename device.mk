@@ -18,8 +18,8 @@ PRODUCT_COPY_FILES := \
 
 PRODUCT_COPY_FILES += \
         device/linaro/snowball/init.rc:root/init.rc \
-        device/linaro/snowball/init.st-ericsson.rc:root/init.st-ericsson.rc \
-        device/linaro/snowball/ueventd.st-ericsson.rc:root/ueventd.st-ericsson.rc
+        device/linaro/snowball/init.st-ericssonsnowballplatform.rc:root/init.st-ericssonsnowballplatform.rc \
+        device/linaro/snowball/ueventd.st-ericssonsnowballplatform.rc:root/ueventd.st-ericssonsnowballplatform.rc
 
 PRODUCT_PACKAGES := \
         make_ext4fs \
