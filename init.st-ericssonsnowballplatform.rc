@@ -114,5 +114,4 @@ service faketsd /system/bin/faketsd
 service gatord /system/bin/gatord
     class main
     user root
-    oneshot
 
