@@ -98,8 +98,6 @@ on boot
     chown system system /sys/class/graphics/fb1/overlays
     chmod 0666 /dev/pvrsrvkm
 
-    insmod /system/modules/gator.ko
-
 # Initialize the SGX driver
 #service pvrsrvinit /system/bin/pvrsrvinit
 #    user root
@@ -109,9 +107,3 @@ service faketsd /system/bin/faketsd
     user bluetooth
     group bluetooth
     oneshot
-
-#userspace daemon needed for gator
-service gatord /system/bin/gatord
-    class main
-    user root
-
