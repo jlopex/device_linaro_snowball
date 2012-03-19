@@ -13,13 +13,17 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES := \
-    device/linaro/snowball/vold.fstab:system/etc/vold.fstab \
-    device/linaro/snowball/egl.cfg:system/lib/egl/egl.cfg
+        device/linaro/snowball/vold.fstab:system/etc/vold.fstab \
+        device/linaro/snowball/egl.cfg:system/lib/egl/egl.cfg \
+        device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-        device/linaro/snowball/init.rc:root/init.rc \
         device/linaro/snowball/init.st-ericssonsnowballplatform.rc:root/init.st-ericssonsnowballplatform.rc \
         device/linaro/snowball/ueventd.st-ericssonsnowballplatform.rc:root/ueventd.st-ericssonsnowballplatform.rc
+
+PRODUCT_COPY_FILES += \
+        frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+        device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
 PRODUCT_PACKAGES := \
         make_ext4fs \
@@ -44,6 +48,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
         make_ext4fs
 
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.nohardwaregfx=true
-
+$(call inherit-product, frameworks/base/build/tablet-dalvik-heap.mk)
