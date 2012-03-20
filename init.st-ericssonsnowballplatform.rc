@@ -84,6 +84,19 @@ on boot
     chown media media /dev/tiler
     chmod 0660 /dev/tiler
     chmod 0660 /dev/dmm
+    # Sensors
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0068/range
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0068/datarate
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0068/powermode
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-001e/mode
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-001e/range
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-001e/rate
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0019/range
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0019/mode
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0018/range
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0018/mode
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0018/rate
+    chown system system /sys/devices/platform/nmk-i2c.2/i2c-2/2-0018/sleep_wake
 
     # Revert the boost_timeout to the default value of 3 sec. Note this won't affect the prev boost
     # request for boot time reduction
