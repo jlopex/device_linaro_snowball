@@ -1,3 +1,15 @@
 
 /dev/pvrsrvkm             0666   system     system
 
+# hwmem driver
+/dev/hwmem                0666   media      system
+
+# Mali 3D IP
+/dev/mali                 0666   system     graphics
+
+# B2R2 device
+/dev/b2r2_blt             0666   system     graphics
+
+# overlay device
+/dev/disp0                0666   system     graphics
+
