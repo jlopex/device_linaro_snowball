@@ -1,0 +1,10 @@
+on fs
+# mount mmc partitions
+   mount ext4 /dev/block/mmcblk1p2 /system ro
+   mount ext4 /dev/block/mmcblk1p3 /cache
+   mount ext4 /dev/block/mmcblk1p5 /data
+
+# comment out the above and uncomment these to run from emmc.
+#   mount ext4 /dev/block/mmcblk0p3 /system ro
+#   mount ext4 /dev/block/mmcblk0p5 /cache
+#   mount ext4 /dev/block/mmcblk0p6 /data

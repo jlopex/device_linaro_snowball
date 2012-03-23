@@ -13,7 +13,7 @@
 # limitations under the License.
 
 PRODUCT_COPY_FILES := \
-	device/linaro/common/init.partitions.rc:root/init.partitions.rc \
+	device/linaro/snowball/init.partitions.rc:root/init.partitions.rc \
         device/linaro/snowball/vold.fstab:system/etc/vold.fstab \
         device/linaro/snowball/egl.cfg:system/lib/egl/egl.cfg \
         device/linaro/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
