@@ -96,7 +96,6 @@ on boot
     chown system system /sys/class/graphics/fb0/fit_to_screen
     chown system system /sys/class/graphics/fb1/overlays
 
-    insmod /system/modules/gator.ko
     insmod /system/modules/mac80211.ko
     insmod /system/modules/cw1200_core.ko
     setprop wifi.interface wlan0
@@ -122,11 +121,6 @@ service faketsd /system/bin/faketsd
     user bluetooth
     group bluetooth
     oneshot
-
-#userspace daemon needed for gator
-service gatord /system/bin/gatord
-    class main
-    user root
 
 #userspace service for GPS
 service lbsd /system/bin/lbsd
