@@ -13,3 +13,9 @@
 # overlay device
 /dev/disp0                0666   system     graphics
 
+# NMF CM devices
+/dev/cm_channel           0660   media      system
+/dev/cm_control           0660   media      system
+
+# XTI trace device
+/dev/stm                  0660   media      system
