@@ -3,7 +3,7 @@
 # Product-specific compile-time definitions.
 #
 
-TARGET_BOARD_PLATFORM := snowball 
+TARGET_BOARD_PLATFORM := snowball
 TARGET_NO_BOOTLOADER := true # Uses u-boot instead 
 TARGET_NO_KERNEL := false
 KERNEL_CONFIG := u8500_android_defconfig
