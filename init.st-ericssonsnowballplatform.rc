@@ -113,6 +113,9 @@ on boot
     insmod /system/modules/cw1200_core.ko
     setprop wifi.interface wlan0
 
+# Start the usb enumeration process from userspace
+    write /sys/devices/platform/ab8500-i2c.0/ab8500-usb.0/boot_time_device 1
+
 service hciattach /system/bin/hciattach -a 23 -n -s 115200 /dev/ttyAMA0 cg2900 115200 flow
     class main
     user root
