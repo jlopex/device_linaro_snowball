@@ -32,6 +32,9 @@ PRODUCT_PACKAGES := \
         sensors.snowball \
 	GPSUI
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=acm,rndis,mass_storage
+
 PRODUCT_PROPERTY_OVERRIDES := \
         hwui.render_dirty_regions=false
 
