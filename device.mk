@@ -20,6 +20,7 @@ PRODUCT_COPY_FILES := \
 
 PRODUCT_COPY_FILES += \
         device/linaro/snowball/init.st-ericssonsnowballplatform.rc:root/init.st-ericssonsnowballplatform.rc \
+        device/linaro/snowball/init.st-ericssonsnowballplatform.usb.rc:root/init.st-ericssonsnowballplatform.usb.rc \
         device/linaro/snowball/ueventd.st-ericssonsnowballplatform.rc:root/ueventd.st-ericssonsnowballplatform.rc
 
 PRODUCT_COPY_FILES += \
