@@ -27,6 +27,10 @@ PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
         device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
 
+# Input device calibration files
+PRODUCT_COPY_FILES += \
+       device/linaro/snowball/ftk.idc:system/usr/idc/ftk.idc
+
 PRODUCT_PACKAGES := \
         make_ext4fs \
         com.android.future.usb.accessory \
