@@ -123,6 +123,9 @@ on boot
     insmod /system/modules/cw1200_core.ko
     setprop wifi.interface wlan0
 
+# Install ftk snowball touchscreen module
+    insmod /system/modules/ftk.ko
+
 # Start the usb enumeration process from userspace
     write /sys/devices/platform/ab8500-i2c.0/ab8500-usb.0/boot_time_device 1
 
