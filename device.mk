@@ -23,6 +23,16 @@ PRODUCT_COPY_FILES += \
         device/linaro/snowball/init.st-ericssonsnowballplatform.usb.rc:root/init.st-ericssonsnowballplatform.usb.rc \
         device/linaro/snowball/ueventd.st-ericssonsnowballplatform.rc:root/ueventd.st-ericssonsnowballplatform.rc
 
+# mesh: copy kernel modules
+PRODUCT_COPY_FILES += \
+        device/linaro/snowball/compat_modules/ath.ko:system/lib/modules/compat/ath.ko \
+        device/linaro/snowball/compat_modules/ath9k_common.ko:system/lib/modules/compat/ath9k_common.ko \
+        device/linaro/snowball/compat_modules/ath9k_hw.ko:system/lib/modules/compat/ath9k_hw.ko \
+        device/linaro/snowball/compat_modules/ath9k_htc.ko:system/lib/modules/compat/ath9k_htc.ko \
+        device/linaro/snowball/compat_modules/compat.ko:system/lib/modules/compat/compat.ko \
+        device/linaro/snowball/compat_modules/cfg80211.ko:system/lib/modules/compat/cfg80211.ko \
+        device/linaro/snowball/compat_modules/mac80211.ko:system/lib/modules/compat/mac80211.ko \
+
 PRODUCT_COPY_FILES += \
         frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
         device/linaro/common/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml
@@ -57,6 +67,13 @@ PRODUCT_PACKAGES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
         make_ext4fs
+
+# mesh: copy ath9k_htc firmware
+PRODUCT_COPY_FILES += \
+         device/linaro/snowball/htc_9271.fw:system/vendor/firmware/htc_9271.fw
+# mesh: copy carl9170 firmware
+PRODUCT_COPY_FILES += \
+        device/linaro/snowball/carl9170-1.fw:system/vendor/firmware/carl9170-1.fw
 
 # Include MM in the build
 
