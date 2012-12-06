@@ -127,7 +127,7 @@ on boot
     insmod /system/modules/compat/compat.ko
     insmod /system/modules/compat/cfg80211.ko
     insmod /system/modules/compat/mac80211.ko
-    insmod /system/modules/cw1200_core.ko
+#    insmod /system/modules/cw1200_core.ko
 
     insmod /system/modules/compat/ath.ko
     insmod /system/modules/compat/ath9k_hw.ko
